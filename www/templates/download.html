@@ -1,0 +1,14 @@
+<ion-view view-title="download">
+  <ion-nav-title>
+    {{tasks.length ? '共有'+tasks.length+'个任务' : '下载'}}
+  </ion-nav-title>
+  <ion-content overflow-scroll="true">
+    <p ng-if="!tasks.length">当前无下载任务</p>
+     <ion-list ng-if="tasks.length">
+      <ion-item ng-repeat="task in tasks" ng-click="openImage(task)" on-hold="cancelTask(task)">
+        任务{{task.id}}<span ng-if="task.progress === 100">已完成</span>
+        <md-progress-linear md-mode="determinate" value="{{task.progress}}" ng-if="task.progress !== 100"></md-progress-linear>
+      </ion-item>
+     </ion-list>
+  </ion-content>
+</ion-view>

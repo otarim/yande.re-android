@@ -1,0 +1,161 @@
+/* Empty. Add your own CSS if you like */
+.bar.bar-stable,.tabs {
+	background: #D81B60;
+}
+.bar-stable .button.button-clear {
+	color: #fff;
+}
+.item-input-inset .button.button-clear,.bar.bar-stable .title {
+	color: #fff;
+}
+.tab-nav.tabs {
+	background: #E91E63;
+	border: none;
+}
+.tabs-top.tabs-striped .tab-item.tab-item-active, .tabs-top.tabs-striped .tab-item.active, .tabs-top.tabs-striped .tab-item.activated {
+	border: none;
+	margin: 0;
+}
+ion-tabs.tabs-color-active-positive .tab-item {
+	color: #fff;
+	opacity: 1;
+}
+ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-color-active-positive .tab-item.active, ion-tabs.tabs-color-active-positive .tab-item.activated {
+	color: #fff;
+	background: rgba(0,0,0,.1)
+}
+.loading {
+	margin: 10px 0 0;
+	text-align: center;
+}
+.pics {
+	-webkit-columns: 2;
+	-webkit-column-gap: 8px;
+	padding: 5px;
+}
+.pics md-card {
+	-webkit-column-break-inside: avoid;
+	margin: 0;
+	margin-bottom: 8px;
+	box-shadow: none;
+	border: 1px solid rgba(0,0,0,.1);
+	border-radius: 2px 2px 0 0;
+}
+.pics md-card-content {
+	padding: 0;
+}
+.pics .md-actions {
+	padding: 10px 0;
+}
+.pics .button-view,.pics .button-dl {
+	cursor: pointer;
+	padding: 0 5px;
+	text-decoration: none;
+}
+.pics .button-view {
+	color: #ccc;
+	font-size: 14px;
+	
+}
+.pics .button-dl {
+	color: #F50057;
+	font-size: 16px;
+}
+.md-tags {
+	overflow: scroll;
+	padding: 0 5px;
+	margin-top: 5px;
+}
+.md-tags span {
+	cursor: pointer;
+    border-radius: 16px;
+    height: 24px;
+    line-height: 24px;
+    margin: 5px 5px 0 0;
+    padding: 0 8px;
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    background: rgb(224,224,224);
+    color: rgb(66,66,66);
+    font-size: 12px;
+    max-width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+/*::-webkit-scrollbar {
+    height: 7px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    background-color: rgba(0, 0, 0, 0.6);
+}*/
+.pagination {
+  margin: 0 auto;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.pagination > li {
+	display: inline-block;
+}
+
+.pagination > li > a,
+.pagination > li > span {
+  position: relative;
+  display: block;
+  padding: 6px 12px;
+  margin: 0 3px;
+  line-height: 1.428571429;
+  text-decoration: none;
+  background-color: #ffffff;
+  color: rgba(0,0,0,.5);
+  font-family: 'Roboto', sans-serif;
+}
+
+.pagination > li:first-child > a,
+.pagination > li:first-child > span {
+  margin-left: 0;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+}
+
+.pagination > li:last-child > a,
+.pagination > li:last-child > span {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.pagination > li > a:hover,
+.pagination > li > span:hover,
+.pagination > li > a:focus,
+.pagination > li > span:focus {
+  background-color: #eeeeee;
+}
+
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+  z-index: 2;
+  color: #ffffff;
+  cursor: default;
+  background-color: #D81B60;
+  border-radius: 100%;
+}
+
+.pagination > .disabled > span,
+.pagination > .disabled > a,
+.pagination > .disabled > a:hover,
+.pagination > .disabled > a:focus {
+  color: #999999;
+  cursor: not-allowed;
+  background-color: #ffffff;
+  border-color: #dddddd;
+}

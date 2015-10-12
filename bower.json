@@ -1,0 +1,14 @@
+{
+  "name": "HelloIonic",
+  "private": "true",
+  "devDependencies": {
+    "ionic": "driftyco/ionic-bower#1.1.0"
+  },
+  "dependencies": {
+    "angular-material": "master",
+    "angular-pagination": "~0.2.6",
+    "ngCordova": "~0.1.20-alpha",
+    "restangular": "~1.5.1",
+    "angular-pagination": "https://github.com/nervgh/angular-pagination"
+  }
+}

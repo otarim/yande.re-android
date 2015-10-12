@@ -1,0 +1,48 @@
+<ion-view view-title="yande.re">
+  <ion-nav-title>
+  <div class="bar bar-header item-input-inset">
+    <label class="item-input-wrapper">
+      <i class="icon ion-ios-search placeholder-icon"></i>
+      <input type="search" placeholder="请输入罗马音.." ng-model="model.keyword">
+    </label>
+    <button class="button button-clear" ng-click="search(true)">
+      搜索
+    </button>
+  </div>
+  </ion-nav-title>
+  <ion-content overflow-scroll="true">
+    <div class="loading" ng-if="loading">
+      <ion-spinner icon="android"></ion-spinner>
+    </div>
+    <md-content class="md-padding pics">
+      <md-card ng-repeat="pic in data">
+        <a ng-href="#/tab/pics/view?url={{pic.sample_url}}"><img ng-src="{{pic.preview_url}}" class="md-card-image" alt="" width="{{width}}" height="{{pic.preview_height * width / pic.preview_width}}"></a>
+        <md-card-content>
+        <md-tags tags="pic.tags" handler="searchByTag(tag)">
+        </md-tags>
+        </md-card-content>
+        <div class="md-actions" layout="row" layout-align="end center">
+          <a class="button-view" ng-href="#/tab/pics/view?url={{pic.sample_url}}">查看大图</a>
+          <a class="button-dl" ng-click="download(pic.file_url)">下载原图</a>
+        </div>
+      </md-card>
+    </md-content>
+    <ul class="pagination" ng-if="data.length">
+      <li ng-class="{disabled: !pagination.inRange(pagination.currentPage - 1)}" ng-click="pagination.setCurrent(pagination.currentPage - 1)">
+          <a href><</a>
+      </li>
+      <li ng-show="pagination.inRange(pagination.pages[0] - 1)" ng-click="pagination.setCurrent(pagination.currentPage - pagination.maxNumbers)">
+          <a href>&hellip;</a>
+      </li>
+      <li ng-repeat="page in pagination.pages track by $index" ng-class="{active: pagination.isCurrent(page)}" ng-click="pagination.setCurrent(page)">
+          <a href ng-bind="page"></a>
+      </li>
+      <li ng-show="pagination.inRange(pagination.pages[pagination.pages.length - 1] + 1)" ng-click="pagination.setCurrent(pagination.currentPage + pagination.maxNumbers)">
+          <a href>&hellip;</a>
+      </li>
+      <li ng-class="{disabled: !pagination.inRange(pagination.currentPage + 1)}" ng-click="pagination.setCurrent(pagination.currentPage + 1)">
+          <a href>></a>
+      </li>
+    </ul>
+  </ion-content>
+</ion-view>
