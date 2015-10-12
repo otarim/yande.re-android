@@ -10,12 +10,9 @@
 
 **构建**
 
-ionic state restore 
+    ionic state restore  
+    bower install  
+    ionic resources  
+    ionic build android
 
-bower install 
-
-ionic resources
-
-ionic build android
-
-在线下载：[http://www.pgyer.com/XrK5](http://www.pgyer.com/XrK5)
+app下载：[http://www.pgyer.com/XrK5](http://www.pgyer.com/XrK5)
